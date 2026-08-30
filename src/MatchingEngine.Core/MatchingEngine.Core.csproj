@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Only needed for the batch path (Batch/BatchScoreQueryBuilder.cs),
+         which executes raw SQL via a SqlConnection directly rather than
+         through the DbContext -- see that file for why. -->
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MatchingEngine.Domain\MatchingEngine.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
